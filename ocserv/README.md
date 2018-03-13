@@ -1,8 +1,6 @@
 ocserv
 ======
 
-![](https://badge.imagelayers.io/vimagick/ocserv:latest.svg)
-
 [OpenConnect server][1] (ocserv) is an SSL VPN server. Its purpose is to be a
 secure, small, fast and configurable VPN server.
 
