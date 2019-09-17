@@ -2,11 +2,8 @@
 # Dockerfile for ocserv
 #
 
-FROM alpine
-MAINTAINER kev <noreply@easypi.pro>
-
-ENV OCSERV_VERSION 0.11.8
-ENV OCSERV_URL ftp://ftp.infradead.org/pub/ocserv/ocserv-$OCSERV_VERSION.tar.xz
+FROM alpine:latest
+MAINTAINER ogi4i <ogi4i@ddn-tld.site>
 
 RUN buildDeps=" \
         curl \
@@ -26,9 +23,11 @@ RUN buildDeps=" \
     "; \
     set -x \
     && apk add --update --virtual .build-deps $buildDeps \
-    && curl -SL $OCSERV_URL -o ocserv.tar.xz \
-    && curl -SL $OCSERV_URL.sig -o ocserv.tar.xz.sig \
-    && gpg --keyserver pgp.mit.edu --recv-key 7F343FA7 \
+    && wget https://ocserv.gitlab.io/www/download.html \
+    && export ocserv_version=$(cat download.html | grep -o '[0-9]*\.[0-9]*\.[0-9]*') \
+    && export ocserv_url=ftp://ftp.infradead.org/pub/ocserv/ocserv-$ocserv_version.tar.xz \
+    && curl -SL $ocserv_url -o ocserv.tar.xz \
+    && curl -SL $ocserv_url.sig -o ocserv.tar.xz.sig \
     && gpg --keyserver pgp.mit.edu --recv-key 96865171 \
     && gpg --verify ocserv.tar.xz.sig \
     && mkdir -p /usr/src/ocserv \
