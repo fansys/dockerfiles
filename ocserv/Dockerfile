@@ -28,7 +28,7 @@ RUN buildDeps=" \
     && export ocserv_url=ftp://ftp.infradead.org/pub/ocserv/ocserv-$ocserv_version.tar.xz \
     && curl -SL $ocserv_url -o ocserv.tar.xz \
     && curl -SL $ocserv_url.sig -o ocserv.tar.xz.sig \
-    && gpg --keyserver pgp.mit.edu --recv-key 96865171 \
+    && gpg --keyserver keys.gnupg.net --recv-key 96865171 \
     && gpg --verify ocserv.tar.xz.sig \
     && mkdir -p /usr/src/ocserv \
     && tar -xf ocserv.tar.xz -C /usr/src/ocserv --strip-components=1 \
