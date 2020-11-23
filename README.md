@@ -13,7 +13,6 @@ A collection of delicious docker recipes.
 
 ## Affiliates
 
-[![](https://bandwagonhost.com/templates/organicbandwagon/images/logo.png)](https://bandwagonhost.com/aff.php?aff=21106)
 [![](https://www.vultr.com/media/banner_1.png)](https://www.vultr.com/?ref=6821947)
 
 ## Todo
@@ -31,8 +30,6 @@ A collection of delicious docker recipes.
 - [ ] libreswan
 - [ ] mitmproxy
 - [ ] nagios
-- [ ] nfs
-- [ ] openldap
 - [ ] openswan
 - [ ] postfix
 - [ ] pritunl
@@ -45,11 +42,17 @@ A collection of delicious docker recipes.
 
 ## Big Data
 
+- [x] airflow
+- [x] ambari
+- [x] cmak (~kafka-manager~)
+- [x] datax :cn:
 - [x] kafka-arm
-- [x] kafka-manager
-- [x] presto
+- [x] luigi
+- [x] nifi
+- [x] openrefine
+- [x] prestodb (official)
+- [x] prestosql (community)
 - [x] superset-arm
-- [x] zookeeper-arm
 
 ## IoT
 
@@ -60,6 +63,7 @@ A collection of delicious docker recipes.
 
 ## Automation
 
+- [x] cronicle
 - [x] drone-rsync-arm
 - [x] drone-scp-arm
 - [x] drone-ssh-arm
@@ -67,42 +71,65 @@ A collection of delicious docker recipes.
 - [x] hubot :octocat:
 - [x] jenkins-arm :beetle:
 
+## Machine Learning
+
+- [x] ludwig
+
+## Cluster
+
+- [x] ggr
+- [x] ggr-ui
+- [x] jsonwire-grid
+- [x] zookeeper-arm
+
+## Monitor
+
+- [x] collectd
+- [x] elastalert
+- [x] glances
+- [x] grafana
+- [x] graphite
+- [x] influxdb
+- [x] logstash
+- [x] statsd
+- [x] telegraf
+- [x] urlwatch :beetle:
+- [x] vnstat
+
 ## Daemon
 
 - [x] alpine-arm :+1:
+- [x] apacheds
 - [x] aria2 :+1:
 - [x] audiowaveform
 - [x] cadvisor
 - [x] casperjs :+1:
-- [x] collectd
 - [x] freegeoip
 - [x] freeradius
 - [x] frp :cn:
-- [x] graphite
 - [x] h2o
 - [x] httpbin :+1:
-- [x] influxdb
-- [x] logstash
-- [x] luigi
 - [x] mariadb
 - [x] mariadb-arm
 - [x] monit
 - [x] moodle :beetle:
 - [x] mosquitto
 - [x] motion-arm :+1:
+- [x] ndscheduler
 - [x] nginx
-- [x] nifi
 - [x] ntopng
 - [x] nullmailer
 - [x] nullmailer-arm
 - [x] openhab
 - [x] openssh
+- [x] ot-frontend-arm
 - [x] ot-recorder
 - [x] ot-recorder-arm
 - [x] piknik
 - [x] portia
 - [x] pure-ftpd
 - [x] redis-arm
+- [x] rehook
 - [x] rinetd
 - [x] rslsync
 - [x] rsyncd
@@ -110,14 +137,11 @@ A collection of delicious docker recipes.
 - [x] samba :+1:
 - [x] samba-arm :+1:
 - [x] scrapyd :+1:
-- [x] statsd
 - [x] swarm-arm
 - [x] taskd
-- [x] telegraf
 - [x] tftpd
 - [x] tmail :beetle:
-- [x] urlwatch :beetle:
-- [x] vnstat
+- [x] twemproxy
 - [x] vsftpd
 - [x] webhook
 - [x] webkit :beetle:
@@ -130,16 +154,16 @@ A collection of delicious docker recipes.
 - [x] ffmpeg-arm
 - [x] ffserver :beetle:
 - [x] icecast
-- [x] live555
+- [x] live555 :camera:
 - [x] minidlna
 - [x] mpd
 - [x] murmur
-- [x] openmeetings
+- [x] openmeetings :camera:
 - [x] plex :moneybag:
 - [x] red5 :+1:
 - [x] red5-arm :construction:
 - [x] rtmp-client-arm :+1:
-- [x] rtmp-server
+- [x] rtmp-server :camera:
 - [x] shairplay-arm
 - [x] shoutcast
 - [x] tesseract
@@ -153,9 +177,7 @@ A collection of delicious docker recipes.
 - [x] django-cms
 - [x] dokuwiki :+1:
 - [x] dokuwiki-arm :+1:
-- [x] glances
 - [x] gogs-arm :cn:
-- [x] grafana
 - [x] hugo
 - [x] hugo-arm
 - [x] jamapi
@@ -165,12 +187,12 @@ A collection of delicious docker recipes.
 - [x] mediagoblin
 - [x] nginad
 - [x] nodebb :+1:
-- [x] openrefine
 - [x] phpbb
 - [x] phpmyadmin-arm
 - [x] phpvirtualbox-arm
 - [x] piwik
 - [x] revive
+- [x] tiddlywiki
 - [x] zoneminder :+1:
 
 ## E-commerce
@@ -182,6 +204,7 @@ A collection of delicious docker recipes.
 ## Security
 
 - [x] aircrack-ng-arm
+- [x] amass
 - [x] bro
 - [x] clamav
 - [x] dsniff
@@ -193,6 +216,7 @@ A collection of delicious docker recipes.
 - [x] routersploit
 - [x] snort :beetle:
 - [x] sslsplit
+- [x] wafw00f
 - [x] webgoat
 
 ## Proxy
@@ -228,6 +252,7 @@ A collection of delicious docker recipes.
 
 ## VPN
 
+- [x] dsvpn :+1:
 - [x] n2n :+1:
 - [x] ocserv :+1:
 - [x] openconnect
@@ -248,74 +273,115 @@ A collection of delicious docker recipes.
 - [x] chinadns
 - [x] dnscrypt
     - [x] dnscrypt-proxy
-    - [x] dnscrypt-wrapper
+    - [x] dnscrypt-server
+    - [x] ~dnscrypt-wrapper~
 - [x] dnsmasq
 - [x] dnsmasq-arm
 - [x] pdnsd
 
-## 3rd-party
+## 3rd-party (sorted by basename)
 
+- [x] docker.bintray.io/jfrog/artifactory-oss
 - [x] tutum/builder
 - [x] browserless/chrome
 - [x] certbot
 - [x] codercom/code-server
-- [x] confluentinc/cp-kafka-mqtt
-- [x] confluentinc/cp-kafka-rest
+- [x] confluentinc
+  - [x] cp-kafka-mqtt
+  - [x] cp-kafka-rest
+  - [x] ksqldb-cli
+  - [x] ksqldb-server
 - [x] streamsets/datacollector
+- [x] daskdev
+  - [x] dask
+  - [x] dask-notebook
+- [x] appbaseio/dejavu :mag:
 - [x] cachethq/docker
-- [x] puckel/docker-airflow
+- [x] snowzach/doods
 - [x] drone/drone
 - [x] drupal
-- [x] elastalert
+- [x] elastichq/elasticsearch-hq
+- [x] elasticdump/elasticsearch-dump
 - [x] elk
+- [x] quay.io/coreos/etcd
+- [x] audreyt/ethercalc
 - [x] flogo/flogo-docker
 - [x] mher/flower
 - [x] ghost
 - [x] gitlab/gitlab-ce
 - [x] atlassianlabs/gostatsd
+- [x] gitea/gitea :cn:
 - [x] gliderlabs/logspout
 - [x] gliderlabs/registrator
 - [ ] glot
     - [ ] bash
     - [ ] python
-- [x] gogs :cn:
+- [x] gogs/gogs :cn:
 - [x] haproxy
+- [x] jenkins
+    - [x] inbound-agent
+    - [x] jenkins
 - [x] jmxtrans/jmxtrans
 - [x] wurstmeister/kafka
+- [x] mailgun/kafka-pixy
+- [x] devopsfaith/krakend
+- [x] tootsuite/mastodon
 - [x] netdata/netdata
 - [x] nextcloud
+- [x] prom/prometheus
 - [x] sonatype/nexus3
+- [ ] jwilder/nginx-proxy
 - [x] jazzdd/phpvirtualbox
-- [x] jenkins
+- [x] sonatype/nexus3
 - [x] jupyter/notebook
-- [x] kylemanna/openvpn
 - [x] metabase/metabase
 - [x] metasploitframework/metasploit-framework :skull:
 - [x] minio/minio
 - [x] mongo
+- [x] ccrisan/motioneye
 - [x] neo4j
 - [x] erichough/nfs-server
+- [x] luzifer/nginx-sso
+- [x] n8nio/n8n
+- [x] notaitech/nudenet
 - [x] odoo
 - [x] osixia/openldap
+- [x] kylemanna/openvpn
 - [x] campbellsoftwaresolutions/osticket
+- [x] outlinewiki/outline
 - [x] owncloud
 - [x] phpmyadmin
 - [x] pihole/pihole
 - [x] portainer/portainer :+1:
 - [x] postgres
 - [x] postgrest/postgrest
+- [x] prosody/prosody
 - [x] registry
+- [x] restic/rest-server
 - [x] rocket.chat
 - [x] rundeck/rundeck
 - [x] wonderfall/searx
-- [ ] selenium
-    - [ ] hub
-    - [ ] node-firefox
+- [x] selenium
+    - [x] hub
+    - [x] node-chrome
+    - [x] node-firefox
     - [x] standalone-firefox
+- [x] aerokube
+    - [x] selenoid
+      - [x] video-recorder
+      - [x] chrome
+      - [x] firefox
+      - [x] vnc
+    - selenoid-ui
 - [x] sentry
+- [x] atmoz/sftp
 - [x] scrapinghub/splash
+- [x] teamatldocker
+    - [x] confluence
+    - [x] jira
 - [x] amancevice/superset
 - [x] v2ray/official :cn:
+- [x] mpromonet/v4l2rtspserver :camera:
 - [x] centurylink/watchtower
 - [x] anapsix/webdis
 - [x] wekanteam/wekan
@@ -351,3 +417,7 @@ __enter() {
 
 complete -F __enter enter
 ```
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/vimagick/dockerfiles.svg)](https://starchart.cc/vimagick/dockerfiles)
